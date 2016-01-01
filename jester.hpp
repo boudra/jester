@@ -1,3 +1,6 @@
+#ifndef JESTER_HPP
+#define JESTER_HPP
+
 #include <iostream>
 #include <stack>
 #include <sstream>
@@ -119,3 +122,5 @@ void after_each(std::function<void()> func) {
 }
 
 }
+
+#endif
