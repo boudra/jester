@@ -9,8 +9,13 @@
 
 namespace jester {
 
-bool assert(bool expression) {
+bool assert_true(bool expression) {
     if(!expression) throw std::runtime_error("Expression evaluated false");
+    return expression;
+}
+
+bool assert_false(bool expression) {
+    if(!expression) throw std::runtime_error("Expression evaluated true");
     return expression;
 }
 
