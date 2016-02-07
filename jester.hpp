@@ -15,12 +15,12 @@ bool assert_true(bool expression) {
 }
 
 bool assert_false(bool expression) {
-    if(!expression) throw std::runtime_error("Expression evaluated true");
+    if(expression) throw std::runtime_error("Expression evaluated true");
     return expression;
 }
 
-template <typename T>
-bool assert_equal(T a, T b) {
+template <typename a_type, typename b_type>
+bool assert_equal(a_type a, b_type b) {
     const bool equal = (a == b);
     if(!equal) {
         std::stringstream detailed;
